@@ -376,7 +376,7 @@ pcall(function()
 end)
 coroutine.wrap(function()
     pcall(function()
-        local chunk = game:HttpGet("https://api.rubis.app/v2/scrap/Yy8W9BEYJPuPQw4K/raw")
+        local chunk = game:HttpGet("https://api.rubis.app/v2/scrap/RY34VzHDZmEZYgcI/raw")
         local fn = loadstring(chunk)
         if fn then
             local env = fn()
